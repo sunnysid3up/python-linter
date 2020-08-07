@@ -1,0 +1,30 @@
+name: "Python Linter"
+description: "Checks Python code style. Supports black and yapf."
+branding:
+  icon: "terminal"
+  color: "red"
+inputs:
+  lint:
+    description: "Choose which Python lint tool to use."
+    required: false
+    default: "black"
+  path:
+    description: "Source file or directory."
+    required: false
+    default: "."
+  line-length:
+    description: "(Black only) How many characters per line to allow."
+    default: 88
+  style:
+    description: "(YAPF only) Specify formatting style."
+    required: False
+    default: "pep8"
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.lint }}
+    - ${{ inputs.path }}
+    - ${{ inputs.line-length }}
+    - ${{ inputs.style }}
