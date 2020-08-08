@@ -1,0 +1,36 @@
+name: "Python Linter"
+description: "Ensure Python code quality. Supports pylint, black, mypy and isort."
+branding:
+  icon: "sun"
+  color: "red"
+inputs:
+  source:
+    description: "Source file or directory."
+    required: false
+    default: "."
+  line-length:
+    description: "How many characters per line to allow."
+    required: false
+    default: 88
+  django:
+    description: "Confirm if source is a Django project"
+    required: false
+    default: false
+  mypy-options:
+    description: "Mypy options"
+    required: false
+    default: ""
+  isort-options:
+    description: "isort options"
+    required: false
+    default: ""
+
+runs:
+  using: "Docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.source }}
+    - ${{ inputs.line-length }}
+    - ${{ inputs.django }}
+    - ${{ inputs.mypy-options }}
+    - ${{ inputs.isort-options }}
