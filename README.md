@@ -38,7 +38,7 @@ Ensure Python code quality. Supports pylint, black, mypy and isort.
    uses: sunnysid3up/python-linter@master
    with:
      source: "src"
-	 mypy-options: "--ignore-missing-imports --show-error-codes"
-	 isort-options: "-w 100",
-	 django: true
+     mypy-options: "--ignore-missing-imports --show-error-codes"
+     isort-options: "-w 100",
+     django: true
 ```
