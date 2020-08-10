@@ -5,17 +5,17 @@ branding:
   color: "red"
 inputs:
   source:
-    description: "Source file or directory."
+    description: "Source file or directory"
     required: false
     default: "."
-  line-length:
-    description: "How many characters per line to allow."
+  strict:
+    description: "Set strictness for lint [low, medium, high]"
     required: false
-    default: 88
-  django:
-    description: "Confirm if source is a Django project"
+    default: "medium"
+  black-options:
+    description: "black options"
     required: false
-    default: false
+    default: ""
   mypy-options:
     description: "Mypy options"
     required: false
@@ -24,13 +24,18 @@ inputs:
     description: "isort options"
     required: false
     default: ""
+  django:
+    description: "Confirm if source is a Django project"
+    required: false
+    default: false
 
 runs:
   using: "Docker"
   image: "Dockerfile"
   args:
     - ${{ inputs.source }}
-    - ${{ inputs.line-length }}
-    - ${{ inputs.django }}
+    - ${{ inputs.strict }}
+    - ${{ inputs.black-options }}
     - ${{ inputs.mypy-options }}
     - ${{ inputs.isort-options }}
+    - ${{ inputs.django }}
