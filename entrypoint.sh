@@ -10,14 +10,13 @@ set -e
 # django = $6
 
 echo "===== Running Python Linter - '$2' ====="
+echo "Django project? '$6'"
 
 echo "===== Running: MYPY ====="
 mypy "$1" --show-error-codes --show-error-context --pretty ${4}
 
 echo "===== Running: PYLINT ====="
 if [ "$6" ]; then
-  echo "===== Django: True"
-
   if [ "$2" = "high" ]; then
     pylint "$1" --load-plugins pylint_django
     echo "===== Running: BLACK ====="
@@ -64,4 +63,4 @@ else
   fi
 fi
 
-echo "Done 🎉"
+echo "$(tput setaf 2)Done 🎉" ; echo ""
