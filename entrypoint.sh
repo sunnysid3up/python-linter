@@ -63,4 +63,4 @@ else
   fi
 fi
 
-echo "$(tput setaf 2)Done 🎉" ; echo ""
+echo "Done 🎉" ; echo ""
