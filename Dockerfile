@@ -10,7 +10,6 @@ RUN pip install pylint-django
 
 RUN pip install black
 RUN pip install mypy
-RUN pip install isort
 
 COPY entrypoint.sh /entrypoint.sh
 

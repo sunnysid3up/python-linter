@@ -12,16 +12,20 @@ inputs:
     description: "Set strictness for lint [low, medium, high]"
     required: false
     default: "medium"
-  black-options:
-    description: "black options"
-    required: false
-    default: ""
   mypy-options:
     description: "Mypy options"
     required: false
     default: ""
+  pylint-options:
+    description: "Pylint options"
+    required: false
+    default: ""
+  black-options:
+    description: "Black options"
+    required: false
+    default: ""
   isort-options:
-    description: "isort options"
+    description: "Isort options"
     required: false
     default: ""
   django:
@@ -35,7 +39,8 @@ runs:
   args:
     - ${{ inputs.source }}
     - ${{ inputs.strict }}
-    - ${{ inputs.black-options }}
     - ${{ inputs.mypy-options }}
+    - ${{ inputs.pylint-options }}
+    - ${{ inputs.black-options }}
     - ${{ inputs.isort-options }}
     - ${{ inputs.django }}
