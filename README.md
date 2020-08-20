@@ -36,19 +36,22 @@ Ensure Python code quality. Supports mypy, pylint, black and isort.
 
 **High**
 - Must not have any type errors.
-- Must meet code standard style (PEP8). Code must have a Pylint score of 10.
 - Must not have any code format issues.
 - Must not have import disorganization.
+- Must meet code standard style (PEP8). Code must have a Pylint score of 10.
+
 
 **Medium (default)**
 - Must not have any type errors.
-- Code must have a Pylint score of 7 ore greater.
 - Must not have any code format issues.
+- Must not have import disorganization.
+- Code must have a Pylint score of 8 ore greater.
 
 **Low**
-- Must not have any type errors
+- Must not have any type errors.
+- Must not have any code format issues.
 
-#### More pylint customization
+#### (Optional) More pylint customization
 Create a setup.cfg or a .pylintrc file in the current working directory.
 
 ```
@@ -68,7 +71,7 @@ disable=
     missing-function-docstring
 ```
 
-#### More isort customization
+#### (Optional) More isort customization
 Create a setup.cfg or a .isort.cfg file in the current working directory.
 
 ```
