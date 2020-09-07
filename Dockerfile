@@ -1,15 +1,10 @@
-  
 FROM python:3.8-slim
 
 LABEL "maintainer" = "Sunny Kim <sungunkim367@gmail.com>"
 
-RUN pip install pylint
 
 # Django
-RUN pip install pylint-django
-
-RUN pip install black
-RUN pip install mypy
+RUN pip install django pylint-django mypy black isort pylint
 
 COPY entrypoint.sh /entrypoint.sh
 
