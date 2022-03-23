@@ -64,4 +64,4 @@ else
   fi
 fi
 
-echo "Done 🎉" ; echo ""
+echo "Done";
