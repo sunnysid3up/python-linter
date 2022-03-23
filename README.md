@@ -97,6 +97,6 @@ sections=FUTURE,STDLIB,DJANGO,DRF,THIRDPARTY,FIRSTPARTY,LOCALFOLDER
      source: "src"
      mypy-options: "--ignore-missing-imports --show-error-codes"
      pylint-options: "--rcfile=setup.cfg"
-     isort-options: "-w 100",
+     isort-options: "-w 100"
      django: true
 ```
