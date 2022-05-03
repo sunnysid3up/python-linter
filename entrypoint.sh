@@ -17,7 +17,7 @@ echo "Running mypy"
 mypy "$1" --show-error-codes --show-error-context --pretty ${3}
 
 echo "Running black"
-if [ "$7" ]; then
+if [ $7 == true ]; then
   if [ "$2" = "high" ]; then
     black "$1" ${5} --exclude "migrations" --check
     echo "Running isort"
