@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -e
+shopt -s globstar
 
 # source = $1
 # strict = $2
