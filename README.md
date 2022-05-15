@@ -9,7 +9,7 @@ Ensure Python code quality. Supports mypy, pylint, black and isort.
 > Mypy is an optional static type checker for Python. You can add type hints (PEP 484) to your Python programs, and use mypy to type check them statically. Find bugs in your programs without even running them!
 
 [pylint](https://github.com/PyCQA/pylint)  
-> Pylint is a Python static code analysis tool which looks for programming errors, helps enforcing a coding standard, sniffs for code smells and offers simple refactoring suggestions.
+> Pylint is a Python static code analysis tool which looks for programming errors, helps to enforce a coding standard, sniffs for code smells and offers simple refactoring suggestions.
   
 [black](https://github.com/psf/black)  
 > Black is the uncompromising Python code formatter. Black makes code review faster by producing the smallest diffs possible.
@@ -45,7 +45,7 @@ Ensure Python code quality. Supports mypy, pylint, black and isort.
 - Must not have any type errors.
 - Must not have any code format issues.
 - Must not have import disorganization.
-- Code must have a Pylint score of 8 ore greater.
+- Code must have a Pylint score of 8 or greater.
 
 **Low**
 - Must not have any type errors.
