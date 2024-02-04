@@ -90,7 +90,7 @@ sections=FUTURE,STDLIB,DJANGO,DRF,THIRDPARTY,FIRSTPARTY,LOCALFOLDER
 ## Example
 ```yaml  
  steps:
- - uses: actions/checkout@v2  
+ - uses: actions/checkout@v3  
  - name: Python Linter
    uses: sunnysid3up/python-linter@master
    with:
